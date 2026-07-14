@@ -1,0 +1,21 @@
+name: d4rl-release
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - numpy=1.23.5
+  - pandas=2.3.3
+  - scipy=1.13.1
+  - matplotlib=3.9.4
+  - tqdm
+  - pytorch=1.12.1
+  - cudatoolkit=11.3
+  - pip:
+      - gym==0.21.0
+      - d4rl==1.1
+      - mujoco-py==2.1.2.14
+      - pyrallis==0.3.1
+      - wandb==0.26.1

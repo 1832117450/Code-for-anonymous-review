@@ -1,0 +1,44 @@
+# Reference configuration for TD3+NC on hopper-medium-v2 with dense rewards.
+env: hopper-medium-v2
+reward_mode: dense
+method: TD3+NC
+lower_only: true
+dense_reward: true
+delay_step: 50
+norm_reward: false
+
+seeds: [0, 1, 2, 3, 4]
+parallel: 1
+max_timesteps: 1000000
+eval_freq: 5000
+eval_episodes: 10
+max_ep_len: 1000
+print_loss_freq: 5000
+
+alpha: 0.5
+beta: 2.0
+k: 4
+actor_lr: 3.0e-4
+critic_lr: 3.0e-4
+value_lr: 1.0e-4
+reward_lr: 1.0e-4
+discount: 0.99
+tau: 0.005
+batch_size: 256
+policy_freq: 2
+policy_noise: 0.2
+noise_clip: 0.5
+lower_update_steps: 10000
+upper_update_steps: 10000
+upper_first: false
+
+normalize_states: true
+norm_eps: 1.0e-3
+buffer_max_size: 2000000
+use_amp: true
+resume: true
+save_training_checkpoint: true
+save_eval_checkpoints: true
+save_final_model: true
+g_as_reward: false
+norm_g_reward: false
